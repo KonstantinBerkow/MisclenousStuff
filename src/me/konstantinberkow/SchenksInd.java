@@ -11,7 +11,7 @@ public class SchenksInd {
      * Считает дискретный логарифм методом Шенкса, параметры по Белозерову
      * g ^ a = x (mod p)
      * @param x - ???
-     * @param g - первообразный корень или что?
+     * @param g - первообразный корень илви что?
      * @param p - нечетное прсотое
      * @return a - искомая хуйня
      */
@@ -32,11 +32,12 @@ public class SchenksInd {
         //small steps
         int currentSmallStep = x; //first step
         for (int j = 0; j <= m; j++) {
-            final int i = arrayIndexOf(bigSteps, currentSmallStep) + 1;
+            System.out.println("Check small step: " + currentSmallStep);
+            final int i = arrayIndexOf(bigSteps, currentSmallStep);
             if (i >= 0) {
-                System.out.printf("i = %d%n", i);
+                System.out.printf("i = %d%n", i + 1);
                 System.out.printf("j = %d%n", j);
-                final int result = m * i - j;
+                final int result = m * (i + 1) - j;
                 System.out.printf("ind(%d, %d, %d) = %d%n", x, g, p, result);
                 return result;
             }
