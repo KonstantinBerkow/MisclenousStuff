@@ -54,8 +54,12 @@ public class Main {
         final int secretLength = secretString.length();
 
         //tests from Wikipedia https://ru.wikipedia.org/wiki/%D0%90%D0%BB%D0%B3%D0%BE%D1%80%D0%B8%D1%82%D0%BC_%D0%A8%D0%B5%D0%BD%D0%BA%D1%81%D0%B0
-        SchenksInd.ind(28, 2, 37);
-        SchenksInd.ind(7531, 6, 8101);
+        final long ind_28_2_37 = SchenksInd.ind(28, 2, 37);
+        assert ind_28_2_37 == 34;
+
+        final long ind_7531_6_8101 = SchenksInd.ind(7531, 6, 8101);
+        assert ind_7531_6_8101 == 6689;
+
         //Belozerov cases
         SchenksInd.ind(18, 5, 97);
         SchenksInd.ind(18, 2, 101);
