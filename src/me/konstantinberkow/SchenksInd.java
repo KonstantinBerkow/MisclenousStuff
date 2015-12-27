@@ -16,6 +16,8 @@ public class SchenksInd {
      * @return a - искомая хуйня
      */
     public static long ind(final long x, final long g, final long p) {
+        System.out.println("----------------------------------------------------------------------------------------");
+        System.out.printf("calculate ind(%d, %d, %d)%n", x, g, p);
         final int m = (int) (Math.sqrt(p) + 1); //"большие" шаги
         System.out.println("Big steps count: " + m);
 
